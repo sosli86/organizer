@@ -1,12 +1,8 @@
-# Source: https://www.rubyguides.com/2015/06/ruby-regex/
-
-# Returns dot_index
+#!/usr/bin/ruby
 
 def get_dot_index(str)
 	str =~ /[.]/
 end
-
-# Returns true if there are NaNs before the .
 
 def has_nan(str, dot_index)
 	@name = str[0, dot_index]
@@ -53,17 +49,17 @@ def get_corrected_filenames(arr)
 end
 
 def write_corrected_filenames(original, corrected)
-	for i in 0..original.length-1
-		file.rename( original[i], corrected[i] )
+	for i in 0..original[0].length-1
+		File.rename( original[0][i], corrected[i] )
 	end
 end
 
-numbered_filenames = get_numbered_filenames
-corrected_filenames = get_corrected_filenames(numbered_filenames)
+# numbered_filenames = get_numbered_filenames
+# corrected_filenames = get_corrected_filenames(numbered_filenames)
 
-for i in 0..numbered_filenames[0].length-1
-	File.rename( numbered_filenames[0][i], corrected_filenames[i] )
-end
+#for i in 0..numbered_filenames[0].length-1
+#	File.rename( numbered_filenames[0][i], corrected_filenames[i] )
+#end
 
 #for i in 0..numbered_filenames[0].length-1
 #	print(numbered_filenames[0][i], " ", corrected_filenames[i], "\n")

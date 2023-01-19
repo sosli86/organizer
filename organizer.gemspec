@@ -1,6 +1,8 @@
+gem "minitest"
+
 Gem::Specification.new do |s|
 	s.name		= "sosli-organizer"
-	s.version	= "0.0.0"
+	s.version	= "0.0.1"
 	s.summary	= "Organizer"
 	s.description	= "organizes directory contents."
 	s.authors	= "Sophia Lionberger"
